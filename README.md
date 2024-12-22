@@ -1,87 +1,154 @@
-### **Jour 1 : Introduction à la Cyberdéfense et au Rôle de la Blue Team**
-- **Matin :**  
-  - Présentation des concepts de base en cybersécurité.  
-  - Les différentes équipes en cybersécurité : Red Team, Blue Team, Purple Team.  
-  - Rôle et responsabilités d’une Blue Team.  
-  - Présentation des cybermenaces actuelles.  
+### Support de Cours : Introduction à la Blue Team
 
-- **Après-midi :**  
-  - Introduction au SOC (Security Operations Center).  
-  - Concepts clés : Confidentialité, Intégrité, Disponibilité (CIA triad).  
-  - Outils Blue Team : SIEM, EDR, IDS/IPS, Firewalls.  
-  - Atelier : Mise en place d’un SIEM basique avec ELK Stack.  
-
----
-
-### **Jour 2 : Surveillance et Détection des Menaces**
-- **Matin :**  
-  - Comprendre les logs (systèmes, réseaux, applications).  
-  - Collecte et analyse des logs avec Syslog et ElasticSearch.  
-  - Détection des comportements anormaux (base sur MITRE ATT&CK).  
-
-- **Après-midi :**  
-  - Introduction à l’analyse des incidents.  
-  - Scénarios courants : brute force, malware, phishing.  
-  - Atelier : Configurer un honeypot pour capturer des logs d’attaques.  
-
----
-
-### **Jour 3 : Réponse aux Incidents**
-- **Matin :**  
-  - Processus de réponse aux incidents (Identification, Containment, Eradication, Recovery).  
-  - Gestion des incidents avec un IRP (Incident Response Plan).  
-  - Collaboration entre équipes Blue et Red Team.  
-
-- **Après-midi :**  
-  - Simulations d’attaques courantes (malware, ransomware).  
-  - Atelier : Répondre à un incident en environnement virtuel.  
-  - Documentation des incidents et reporting.  
+## Plan du Cours
+1. Introduction à la Blue Team
+2. Concepts fondamentaux de la Blue Team
+3. Rôles et responsabilités de la Blue Team
+4. Méthodes et outils utilisés par la Blue Team
+5. Gestion de la sécurité
+6. Politiques de sécurité et procédures de la Blue Team
+7. Gestion des incidents de sécurité
+8. Analyse des menaces et vulnérabilités
+9. Défense des réseaux
+    - Techniques de protection des réseaux
+    - Surveillance des réseaux
+    - Détection et réponse aux intrusions
+10. Défense des applications
+    - Techniques de protection des applications
+    - Surveillance des applications
+    - Détection et réponse aux attaques sur les applications
+11. Gestion de la sécurité des données
+    - Techniques de protection des données
+    - Surveillance des données
+    - Détection et réponse aux violations de données
+12. Gestion de la sécurité des périphériques
+    - Techniques de protection des périphériques
+    - Surveillance des périphériques
+    - Détection et réponse aux attaques contre les périphériques
+13. Conformité et gouvernance
+    - Règlementations de conformité en matière de sécurité
+    - Gouvernance de la sécurité et pratiques de conformité
+    - Pratiques de rapport et de présentation de la sécurité
 
 ---
 
-### **Jour 4 : Sécurisation des Infrastructures**
-- **Matin :**  
-  - Bonnes pratiques pour sécuriser les réseaux (segmentation, VLAN, VPN).  
-  - Sécurisation des systèmes d’exploitation (Windows/Linux).  
-  - Patch management et gestion des vulnérabilités.  
+## 1. Introduction à la Blue Team
+La Blue Team est une composante essentielle de la cybersécurité, chargée de défendre les systèmes, les réseaux et les données d'une organisation contre les cyberattaques. Contrairement à la Red Team, qui simule des attaques pour tester les systèmes, la Blue Team se concentre sur la prévention, la détection et la réponse aux incidents de sécurité.
 
-- **Après-midi :**  
-  - Analyse des configurations d’Active Directory.  
-  - Atelier : Durcissement des configurations sur un serveur Windows et un serveur Linux.  
+**Exemple :**
+- Simulation d'une attaque par phishing : La Blue Team surveille les mails entrants, identifie des tentatives suspectes et bloque les liens malveillants.
+- Blocage d'IP suspectes grâce à des pare-feux comme Palo Alto ou Fortinet.
 
----
-
-### **Jour 5 : Gestion des Menaces Avancées**
-- **Matin :**  
-  - Analyse des menaces persistantes avancées (APT).  
-  - Introduction aux Threat Intelligence.  
-  - Utilisation de frameworks : MITRE ATT&CK, Cyber Kill Chain.  
-
-- **Après-midi :**  
-  - Analyse de malwares (sandboxing, reverse engineering de base).  
-  - Atelier : Détection et réponse à une attaque simulée par APT.  
+**TP :**
+- Installez un honeypot (ex: Cowrie) et observez les tentatives de connexion. Rédigez un rapport sur les tentatives d'intrusion détectées.
 
 ---
 
-### **Jour 6 : Automatisation et Optimisation des Défenses**
-- **Matin :**  
-  - Automatisation avec scripts Python pour la cybersécurité.  
-  - Introduction aux outils SOAR (Security Orchestration, Automation, and Response).  
-  - Détection basée sur des indicateurs de compromission (IOC).  
+## 2. Concepts Fondamentaux de la Blue Team
+- **Surveillance continue** : Mise en place de systèmes de monitoring (comme ELK, Splunk, Grafana).
+- **Détection des anomalies** : Utilisation d'algorithmes d'apprentissage automatique pour détecter les comportements suspects (Zeek, Velociraptor).
+- **Réponse rapide** : Implémentation de playbooks automatisés (Demisto, TheHive).
+- **Analyse forensique** : Utilisation d'outils comme Autopsy, Volatility.
 
-- **Après-midi :**  
-  - Création de playbooks pour des réponses automatisées.  
-  - Atelier : Configurer et utiliser un outil SOAR.  
+**TP :**
+- Utilisez Wireshark pour capturer du trafic réseau et identifiez les paquets suspects.
 
 ---
 
-### **Jour 7 : Évaluation et Simulation**
-- **Matin :**  
-  - Red Team vs Blue Team : simulations d’attaques en temps réel.  
-  - Mise en place d’un tableau de bord pour le suivi des incidents.  
-  - Débriefing et analyse des performances.  
+## 3. Rôles et Responsabilités de la Blue Team
+- Protection des systèmes et réseaux
+- Gestion des incidents de sécurité
+- Formation du personnel
+- Actualisation des politiques de sécurité
 
-- **Après-midi :**  
-  - Quiz final et questions ouvertes.  
-  - Discussion sur les certifications pertinentes (CEH, CompTIA CySA+, CISSP).  
-  - Conclusion et conseils pour aller plus loin.
+**TP :**
+- Créez une politique de sécurité pour un réseau fictif.
+
+---
+
+## 4. Méthodes et Outils Utilisés par la Blue Team
+- IDS (Snort, Suricata)
+- SIEM (ELK Stack, Wazuh)
+- Pare-feux (PfSense, Palo Alto)
+
+**TP :**
+- Installez Snort et simulez une attaque de scan de ports.
+
+---
+
+## 5. Gestion de la Sécurité
+- Politiques de sécurité
+- Protocoles basés sur MITRE ATT&CK
+
+**TP :**
+- Rédigez une procédure de réponse à une attaque.
+
+---
+
+## 6. Politiques de Sécurité et Procédures de la Blue Team
+- Élaboration et mise à jour régulière des politiques.
+
+---
+
+## 7. Gestion des Incidents de Sécurité
+- Identification et containment rapide des incidents.
+
+---
+
+## 8. Analyse des Menaces et Vulnérabilités
+- Cartographie des vulnérabilités (Nessus, OpenVAS).
+
+---
+
+## 9. Défense des Réseaux
+### Techniques de Protection des Réseaux
+- Segmentation du réseau.
+
+### Surveillance des Réseaux
+- Déploiement de Zeek pour l’analyse.
+
+### Détection et Réponse aux Intrusions
+- IDS et IPS pour une protection avancée.
+
+---
+
+## 10. Défense des Applications
+### Techniques de Protection des Applications
+- ModSecurity, FortiWeb.
+
+### Surveillance des Applications
+- OWASP ZAP.
+
+### Détection et Réponse aux Attaques
+- Burp Suite pour des tests d’intrusion.
+
+---
+
+## 11. Gestion de la Sécurité des Données
+### Techniques de Protection des Données
+- Chiffrement des données sensibles.
+
+### Surveillance des Données
+- Implémentation d’outils SIEM.
+
+### Détection et Réponse
+- Wazuh pour surveiller les accès non autorisés.
+
+---
+
+## 12. Gestion de la Sécurité des Périphériques
+### Techniques de Protection
+- Endpoints (CrowdStrike, SentinelOne).
+
+---
+
+## 13. Conformité et Gouvernance
+### Règlementations de Conformité
+- RGPD, ISO 27001.
+
+### Gouvernance
+- Audits réguliers.
+
+### Pratiques de Rapport
+- Reporting des incidents et présentation des résultats.
+
