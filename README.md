@@ -1,154 +1,195 @@
-### Support de Cours : Introduction à la Blue Team
+### **Introduction à la Blue Team**
+#### **Théorie**
+- Définition de la Blue Team : La Blue Team est une équipe de sécurité chargée de défendre les systèmes d'information contre les attaques. Elle travaille en collaboration avec la Red Team (attaque) et la Purple Team (coordination).
+- Objectifs : Protéger les actifs, détecter les menaces, répondre aux incidents et maintenir la résilience.
+- Différence entre Blue Team, Red Team et Purple Team.
 
-## Plan du Cours
-1. Introduction à la Blue Team
-2. Concepts fondamentaux de la Blue Team
-3. Rôles et responsabilités de la Blue Team
-4. Méthodes et outils utilisés par la Blue Team
-5. Gestion de la sécurité
-6. Politiques de sécurité et procédures de la Blue Team
-7. Gestion des incidents de sécurité
-8. Analyse des menaces et vulnérabilités
-9. Défense des réseaux
-    - Techniques de protection des réseaux
-    - Surveillance des réseaux
-    - Détection et réponse aux intrusions
-10. Défense des applications
-    - Techniques de protection des applications
-    - Surveillance des applications
-    - Détection et réponse aux attaques sur les applications
-11. Gestion de la sécurité des données
-    - Techniques de protection des données
-    - Surveillance des données
-    - Détection et réponse aux violations de données
-12. Gestion de la sécurité des périphériques
-    - Techniques de protection des périphériques
-    - Surveillance des périphériques
-    - Détection et réponse aux attaques contre les périphériques
-13. Conformité et gouvernance
-    - Règlementations de conformité en matière de sécurité
-    - Gouvernance de la sécurité et pratiques de conformité
-    - Pratiques de rapport et de présentation de la sécurité
+#### **Exercice**
+1. Recherchez et comparez les rôles de la Blue Team, Red Team et Purple Team dans une organisation.
+2. Identifiez trois exemples d'organisations utilisant des Blue Teams.
+
+#### **TP**
+- Mettez en place un environnement de test (lab) avec des outils comme VirtualBox ou VMware pour simuler un réseau d'entreprise.
 
 ---
 
-## 1. Introduction à la Blue Team
-La Blue Team est une composante essentielle de la cybersécurité, chargée de défendre les systèmes, les réseaux et les données d'une organisation contre les cyberattaques. Contrairement à la Red Team, qui simule des attaques pour tester les systèmes, la Blue Team se concentre sur la prévention, la détection et la réponse aux incidents de sécurité.
+### **Concepts fondamentaux de la Blue Team**
+#### **Théorie**
+- Principes de base : Confidentialité, intégrité, disponibilité (CIA).
+- Modèles de sécurité : Défense en profondeur, moindre privilège, segmentation.
+- Cycle de vie de la sécurité : Prévention, détection, réponse, récupération.
 
-**Exemple :**
-- Simulation d'une attaque par phishing : La Blue Team surveille les mails entrants, identifie des tentatives suspectes et bloque les liens malveillants.
-- Blocage d'IP suspectes grâce à des pare-feux comme Palo Alto ou Fortinet.
+#### **Exercice**
+1. Expliquez en détail le modèle de défense en profondeur.
+2. Donnez un exemple concret d'application du principe de moindre privilège.
 
-**TP :**
-- Installez un honeypot (ex: Cowrie) et observez les tentatives de connexion. Rédigez un rapport sur les tentatives d'intrusion détectées.
-
----
-
-## 2. Concepts Fondamentaux de la Blue Team
-- **Surveillance continue** : Mise en place de systèmes de monitoring (comme ELK, Splunk, Grafana).
-- **Détection des anomalies** : Utilisation d'algorithmes d'apprentissage automatique pour détecter les comportements suspects (Zeek, Velociraptor).
-- **Réponse rapide** : Implémentation de playbooks automatisés (Demisto, TheHive).
-- **Analyse forensique** : Utilisation d'outils comme Autopsy, Volatility.
-
-**TP :**
-- Utilisez Wireshark pour capturer du trafic réseau et identifiez les paquets suspects.
+#### **TP**
+- Configurez un pare-feu (pfSense) et appliquez des règles de segmentation réseau.
 
 ---
 
-## 3. Rôles et Responsabilités de la Blue Team
-- Protection des systèmes et réseaux
-- Gestion des incidents de sécurité
-- Formation du personnel
-- Actualisation des politiques de sécurité
+### **Rôles et responsabilités de la Blue Team**
+#### **Théorie**
+- Rôles clés : Analyste SOC, ingénieur en sécurité, gestionnaire d'incidents.
+- Responsabilités : Surveillance, analyse des logs, réponse aux incidents, formation des utilisateurs.
 
-**TP :**
-- Créez une politique de sécurité pour un réseau fictif.
+#### **Exercice**
+1. Créez un organigramme d'une Blue Team typique avec les rôles et responsabilités.
+2. Identifiez les compétences techniques et non techniques nécessaires pour chaque rôle.
 
----
-
-## 4. Méthodes et Outils Utilisés par la Blue Team
-- IDS (Snort, Suricata)
-- SIEM (ELK Stack, Wazuh)
-- Pare-feux (PfSense, Palo Alto)
-
-**TP :**
-- Installez Snort et simulez une attaque de scan de ports.
+#### **TP**
+- Simulez un incident de sécurité et attribuez des rôles à chaque membre de l'équipe pour y répondre.
 
 ---
 
-## 5. Gestion de la Sécurité
-- Politiques de sécurité
-- Protocoles basés sur MITRE ATT&CK
+### **Méthodes et outils utilisés par la Blue Team**
+#### **Théorie**
+- Méthodes : Analyse des logs, chasse aux menaces (threat hunting), analyse forensique.
+- Outils : SIEM (Splunk, ELK), IDS/IPS (Snort, Suricata), antivirus (CrowdStrike).
 
-**TP :**
-- Rédigez une procédure de réponse à une attaque.
+#### **Exercice**
+1. Comparez deux outils SIEM (par exemple, Splunk vs ELK Stack).
+2. Expliquez le fonctionnement d'un IDS comme Snort.
 
----
-
-## 6. Politiques de Sécurité et Procédures de la Blue Team
-- Élaboration et mise à jour régulière des politiques.
-
----
-
-## 7. Gestion des Incidents de Sécurité
-- Identification et containment rapide des incidents.
+#### **TP**
+- Installez et configurez un SIEM (ELK Stack) pour surveiller un réseau virtuel.
 
 ---
 
-## 8. Analyse des Menaces et Vulnérabilités
-- Cartographie des vulnérabilités (Nessus, OpenVAS).
+### **Gestion de la sécurité**
+#### **Théorie**
+- Gestion des risques : Identification, évaluation, traitement des risques.
+- Cadres de sécurité : ISO 27001, NIST Cybersecurity Framework.
+
+#### **Exercice**
+1. Appliquez le cadre NIST à un scénario d'entreprise fictif.
+2. Identifiez les risques liés à une infrastructure cloud.
+
+#### **TP**
+- Réalisez une analyse de risque pour un scénario donné et proposez des mesures de mitigation.
 
 ---
 
-## 9. Défense des Réseaux
-### Techniques de Protection des Réseaux
-- Segmentation du réseau.
+### **Politiques de sécurité et procédures de la Blue Team**
+#### **Théorie**
+- Politiques : Acceptable Use Policy (AUP), politique de mot de passe.
+- Procédures : Réponse aux incidents, gestion des correctifs.
 
-### Surveillance des Réseaux
-- Déploiement de Zeek pour l’analyse.
+#### **Exercice**
+1. Rédigez une politique de mot de passe pour une entreprise.
+2. Créez une procédure de réponse à un incident de phishing.
 
-### Détection et Réponse aux Intrusions
-- IDS et IPS pour une protection avancée.
-
----
-
-## 10. Défense des Applications
-### Techniques de Protection des Applications
-- ModSecurity, FortiWeb.
-
-### Surveillance des Applications
-- OWASP ZAP.
-
-### Détection et Réponse aux Attaques
-- Burp Suite pour des tests d’intrusion.
+#### **TP**
+- Mettez en œuvre une politique de mot de passe sur un domaine Active Directory.
 
 ---
 
-## 11. Gestion de la Sécurité des Données
-### Techniques de Protection des Données
-- Chiffrement des données sensibles.
+### **Gestion des incidents de sécurité**
+#### **Théorie**
+- Cycle de gestion des incidents : Préparation, identification, confinement, éradication, récupération, leçons apprises.
+- Outils : Ticketing (Jira), forensic tools (Autopsy).
 
-### Surveillance des Données
-- Implémentation d’outils SIEM.
+#### **Exercice**
+1. Analysez un cas réel d'incident de sécurité (par exemple, une fuite de données).
+2. Proposez un plan de réponse pour un ransomware.
 
-### Détection et Réponse
-- Wazuh pour surveiller les accès non autorisés.
-
----
-
-## 12. Gestion de la Sécurité des Périphériques
-### Techniques de Protection
-- Endpoints (CrowdStrike, SentinelOne).
+#### **TP**
+- Simulez un incident de ransomware et suivez les étapes du cycle de gestion des incidents.
 
 ---
 
-## 13. Conformité et Gouvernance
-### Règlementations de Conformité
-- RGPD, ISO 27001.
+### **Analyse des menaces et vulnérabilités**
+#### **Théorie**
+- Menaces : APT, malware, phishing.
+- Vulnérabilités : CVE, CVSS, scanning (Nessus, OpenVAS).
 
-### Gouvernance
-- Audits réguliers.
+#### **Exercice**
+1. Recherchez une CVE récente et expliquez son impact.
+2. Utilisez un scanner de vulnérabilités pour analyser un système.
 
-### Pratiques de Rapport
-- Reporting des incidents et présentation des résultats.
+#### **TP**
+- Analysez un système avec OpenVAS et proposez des correctifs.
 
+---
+
+### **Défense des réseaux**
+#### **Théorie**
+- Techniques : Pare-feu, segmentation, VPN.
+- Surveillance : NetFlow, analyse de paquets (Wireshark).
+
+#### **Exercice**
+1. Configurez un VPN sur un routeur.
+2. Analysez un fichier PCAP avec Wireshark.
+
+#### **TP**
+- Mettez en place un pare-feu et surveillez le trafic réseau.
+
+---
+
+### **Défense des applications**
+#### **Théorie**
+- Techniques : WAF, validation des entrées, chiffrement.
+- Surveillance : Logs d'application, analyse des comportements.
+
+#### **Exercice**
+1. Configurez un WAF (ModSecurity) pour une application web.
+2. Identifiez les vulnérabilités OWASP Top 10 dans une application.
+
+#### **TP**
+- Sécurisez une application web avec un WAF et testez-la avec OWASP ZAP.
+
+---
+
+### **Gestion de la sécurité des données**
+#### **Théorie**
+- Techniques : Chiffrement (AES, RSA), DLP, sauvegarde.
+- Surveillance : Détection d'anomalies, classification des données.
+
+#### **Exercice**
+1. Chiffrez un fichier avec AES.
+2. Configurez une solution DLP pour surveiller les données sensibles.
+
+#### **TP**
+- Mettez en place un système de sauvegarde chiffrée avec VeraCrypt.
+
+---
+
+### **Gestion de la sécurité des périphériques**
+#### **Théorie**
+- Techniques : MDM, mise à jour des firmwares, contrôle d'accès.
+- Surveillance : Détection des périphériques non autorisés.
+
+#### **Exercice**
+1. Configurez un MDM pour gérer des appareils mobiles.
+2. Identifiez les risques liés aux périphériques IoT.
+
+#### **TP**
+- Sécurisez un réseau IoT avec des règles de pare-feu.
+
+---
+
+### **Conformité et gouvernance**
+#### **Théorie**
+- Règlementations : GDPR, HIPAA, PCI-DSS.
+- Gouvernance : Politiques, audits, reporting.
+
+#### **Exercice**
+1. Comparez GDPR et HIPAA.
+2. Rédigez un rapport d'audit de sécurité fictif.
+
+#### **TP**
+- Réalisez un audit de conformité pour un scénario donné.
+
+---
+
+### **Pratiques de rapport et de présentation de la sécurité**
+#### **Théorie**
+- Rapports : Structure, clarté, visualisation des données.
+- Présentation : Adaptation au public, gestion des questions.
+
+#### **Exercice**
+1. Créez un rapport d'incident de sécurité.
+2. Présentez un plan de sécurité à un public non technique.
+
+#### **TP**
+- Présentez un rapport de sécurité à vos collègues et recueillez des feedbacks.
