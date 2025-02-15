@@ -1,4 +1,4 @@
-### **Introduction à la Blue Team**
+### **CHAPITRE-01 Introduction à la Blue Team**
 #### **Théorie**
 - Définition de la Blue Team : La Blue Team est une équipe de sécurité chargée de défendre les systèmes d'information contre les attaques. Elle travaille en collaboration avec la Red Team (attaque) et la Purple Team (coordination).
 - Objectifs : Protéger les actifs, détecter les menaces, répondre aux incidents et maintenir la résilience.
@@ -13,7 +13,7 @@
 
 ---
 
-### **Concepts fondamentaux de la Blue Team**
+### **CHAPITRE-02 Concepts fondamentaux de la Blue Team**
 #### **Théorie**
 - Principes de base : Confidentialité, intégrité, disponibilité (CIA).
 - Modèles de sécurité : Défense en profondeur, moindre privilège, segmentation.
@@ -28,7 +28,7 @@
 
 ---
 
-### **Rôles et responsabilités de la Blue Team**
+### **CHAPITRE-03 Rôles et responsabilités de la Blue Team**
 #### **Théorie**
 - Rôles clés : Analyste SOC, ingénieur en sécurité, gestionnaire d'incidents.
 - Responsabilités : Surveillance, analyse des logs, réponse aux incidents, formation des utilisateurs.
@@ -42,7 +42,7 @@
 
 ---
 
-### **Méthodes et outils utilisés par la Blue Team**
+### **CHAPITRE-04 Méthodes et outils utilisés par la Blue Team**
 #### **Théorie**
 - Méthodes : Analyse des logs, chasse aux menaces (threat hunting), analyse forensique.
 - Outils : SIEM (Splunk, ELK), IDS/IPS (Snort, Suricata), antivirus (CrowdStrike).
@@ -56,7 +56,7 @@
 
 ---
 
-### **Gestion de la sécurité**
+### **CHAPITRE-05 Gestion de la sécurité**
 #### **Théorie**
 - Gestion des risques : Identification, évaluation, traitement des risques.
 - Cadres de sécurité : ISO 27001, NIST Cybersecurity Framework.
@@ -70,7 +70,7 @@
 
 ---
 
-### **Politiques de sécurité et procédures de la Blue Team**
+### **CHAPITRE-06 Politiques de sécurité et procédures de la Blue Team**
 #### **Théorie**
 - Politiques : Acceptable Use Policy (AUP), politique de mot de passe.
 - Procédures : Réponse aux incidents, gestion des correctifs.
@@ -84,7 +84,7 @@
 
 ---
 
-### **Gestion des incidents de sécurité**
+### **CHAPITRE-07 Gestion des incidents de sécurité**
 #### **Théorie**
 - Cycle de gestion des incidents : Préparation, identification, confinement, éradication, récupération, leçons apprises.
 - Outils : Ticketing (Jira), forensic tools (Autopsy).
@@ -98,7 +98,7 @@
 
 ---
 
-### **Analyse des menaces et vulnérabilités**
+### **CHAPITRE-08 Analyse des menaces et vulnérabilités**
 #### **Théorie**
 - Menaces : APT, malware, phishing.
 - Vulnérabilités : CVE, CVSS, scanning (Nessus, OpenVAS).
@@ -112,7 +112,7 @@
 
 ---
 
-### **Défense des réseaux**
+### **CHAPITRE-09 Défense des réseaux**
 #### **Théorie**
 - Techniques : Pare-feu, segmentation, VPN.
 - Surveillance : NetFlow, analyse de paquets (Wireshark).
@@ -126,7 +126,7 @@
 
 ---
 
-### **Défense des applications**
+### **CHAPITRE-10 Défense des applications**
 #### **Théorie**
 - Techniques : WAF, validation des entrées, chiffrement.
 - Surveillance : Logs d'application, analyse des comportements.
@@ -140,7 +140,7 @@
 
 ---
 
-### **Gestion de la sécurité des données**
+### **CHAPITRE-11 Gestion de la sécurité des données**
 #### **Théorie**
 - Techniques : Chiffrement (AES, RSA), DLP, sauvegarde.
 - Surveillance : Détection d'anomalies, classification des données.
@@ -154,7 +154,7 @@
 
 ---
 
-### **Gestion de la sécurité des périphériques**
+### **CHAPITRE-12 Gestion de la sécurité des périphériques**
 #### **Théorie**
 - Techniques : MDM, mise à jour des firmwares, contrôle d'accès.
 - Surveillance : Détection des périphériques non autorisés.
@@ -168,7 +168,7 @@
 
 ---
 
-### **Conformité et gouvernance**
+### **CHAPITRE-13 Conformité et gouvernance**
 #### **Théorie**
 - Règlementations : GDPR, HIPAA, PCI-DSS.
 - Gouvernance : Politiques, audits, reporting.
@@ -182,7 +182,7 @@
 
 ---
 
-### **Pratiques de rapport et de présentation de la sécurité**
+### **CHAPITRE-14 Pratiques de rapport et de présentation de la sécurité**
 #### **Théorie**
 - Rapports : Structure, clarté, visualisation des données.
 - Présentation : Adaptation au public, gestion des questions.
