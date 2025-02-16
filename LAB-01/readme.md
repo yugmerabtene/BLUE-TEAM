@@ -8,6 +8,96 @@
   - Présentation de la suite ELK (Elasticsearch, Logstash, Kibana).
   - Cas d'utilisation typiques (centralisation des logs, analyse de données, surveillance en temps réel).
   - Vue d'ensemble des composants : Elasticsearch, Logstash, Kibana, Filebeat, Metricbeat.
+    ![image](https://github.com/user-attachments/assets/0fde84b2-c5e5-48b0-a7cd-24c8778aa991)
+
+---
+
+### **1. Qu'est-ce qu'Elasticsearch ?**
+- **Définition** : Elasticsearch est une base de données NoSQL basée sur le moteur de recherche **Apache Lucene**.
+- **Fonctionnalités** :
+  - Indexation et recherche de données en temps quasi réel (NRT).
+  - Stockage de documents JSON sans schéma prédéfini.
+  - Recherche en texte intégral et prise en charge multilingue.
+  - Scalabilité horizontale et gestion distribuée des données.
+- **Avantages** :
+  - Facile à déployer et à gérer.
+  - Permet des analyses complexes et des requêtes avancées.
+  - Centralisation des données pour une recherche rapide.
+
+---
+
+### **2. Termes clés dans Elasticsearch**
+- **Cluster** : Ensemble de nœuds qui stockent et traitent les données.
+- **Nœud** : Instance d'Elasticsearch.
+- **Index** : Collection de documents similaires (ex : données clients, catalogue de produits).
+- **Document** : Unité de base des données, stockée en JSON.
+- **Shard (Tesson)** : Fraction d'un index, distribué sur plusieurs nœuds.
+
+---
+
+### **3. Qu'est-ce que Logstash ?**
+- **Définition** : Outil de collecte et de traitement de données.
+- **Fonctionnalités** :
+  - Collecte des données provenant de sources diverses.
+  - Filtrage et transformation des données.
+  - Envoi des données traitées vers Elasticsearch.
+- **Composants** :
+  - **Entrée** : Réception des données.
+  - **Filtre** : Transformation des données.
+  - **Sortie** : Envoi des données traitées.
+- **Avantages** :
+  - Centralisation du traitement des données.
+  - Prise en charge de nombreux formats de données.
+
+---
+
+### **4. Qu'est-ce que Kibana ?**
+- **Définition** : Outil de visualisation des données stockées dans Elasticsearch.
+- **Fonctionnalités** :
+  - Tableaux de bord interactifs.
+  - Visualisation des données via des graphiques, cartes et diagrammes.
+  - Recherche en temps réel.
+- **Types de recherches** :
+  - Recherche en texte libre.
+  - Recherche par champ.
+  - Recherche de proximité.
+- **Avantages** :
+  - Interface intuitive et conviviale.
+  - Intégration complète avec Elasticsearch.
+
+---
+
+### **5. Pourquoi utiliser la pile ELK ?**
+- **Analyse des journaux** :
+  - Surveillance des performances et des erreurs dans les environnements cloud.
+  - Centralisation des logs pour une meilleure prise de décision.
+- **Cas d'utilisation** :
+  - **Netflix** : Surveillance des logs de sécurité.
+  - **LinkedIn** : Analyse des performances et de la sécurité.
+  - **Tripwire** : Gestion des événements de sécurité.
+  - **Medium** : Débogage des problèmes de production.
+
+---
+
+### **6. Comparaison ELK vs Splunk**
+| **Critère**            | **ELK**                              | **Splunk**                          |
+|-------------------------|--------------------------------------|-------------------------------------|
+| **Type**               | Open Source                         | Commercial                         |
+| **Portabilité**        | Pas de support Solaris              | Support Solaris                    |
+| **Vitesse**            | Limité                              | Rapide et précis                   |
+| **Intégration**        | Difficile avec d'autres outils      | Facile avec d'autres outils        |
+| **Analyse**            | Nécessite une configuration complète | Prêt à l'emploi                   |
+
+---
+
+### **7. Avantages et inconvénients de la pile ELK**
+- **Avantages** :
+  - Centralisation des logs.
+  - Scalabilité horizontale et verticale.
+  - Support de nombreux langages de programmation.
+- **Inconvénients** :
+  - Complexité de gestion pour des configurations avancées.
+  - Courbe d'apprentissage pour les débutants.
 
 ---
 
