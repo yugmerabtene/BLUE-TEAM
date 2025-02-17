@@ -305,8 +305,146 @@
 
 ---
 
-### **26. Logstash: Date Filter**
-- **Objectif** : Utiliser le filtre de date dans Logstash.
-- **Contenu** :
-  - Configuration du filtre de date.
-  - Normalisation des timestamps dans les logs.
+27. Logstash : filter mutate  
+Objectif : Comprendre le filtre mutate dans Logstash.  
+Contenu :  
+- Utilisation pour modifier les champs des logs.  
+- Exemples de transformations courantes (remplacement de texte, suppression de champs).
+
+28. Logstash : filter aggregate  
+Objectif : Utiliser le filtre aggregate pour combiner plusieurs événements en un seul.  
+Contenu :  
+- Configuration de base.  
+- Cas d’utilisation pour la gestion des logs transactionnels.
+
+29. Logstash : ajouter/supprimer un plugin  
+Objectif : Gérer les plugins dans Logstash.  
+Contenu :  
+- Installation et suppression de plugins.  
+- Commandes utiles et dépannage des erreurs de plugins.
+
+30. Logstash : autres filtres  
+Objectif : Explorer les filtres avancés dans Logstash.  
+Contenu :  
+- Introduction à des filtres comme évaluateur de condition et translate.  
+- Cas pratiques.
+
+31. Logstash : filter grok - principes et utilisation  
+Objectif : Apprendre à utiliser le filtre grok pour analyser les logs.  
+Contenu :  
+- Notions de base du grok.  
+- Extraction des champs à partir des logs en texte brut.
+
+32. Logstash : filter grok et personnalisation  
+Objectif : Personnaliser les filtres grok pour des besoins spécifiques.  
+Contenu :  
+- Modèles personnalisés grok.  
+- Meilleures pratiques pour l’efficacité.
+
+33. Logstash : grok et gestion du grokparsefailure  
+Objectif : Gérer les erreurs de parsing avec grokparsefailure.  
+Contenu :  
+- Identification et résolution des erreurs courantes.  
+- Mise en place de la tolérance aux erreurs.
+
+34. Logstash : gestion des input multilignes  
+Objectif : Configurer Logstash pour ingérer des entrées multilignes.  
+Contenu :  
+- Configuration des patterns multilignes.  
+- Cas d’utilisation : logs de stack trace.
+
+35. Logstash : outputs file, csv et exec  
+Objectif : Explorer les différents types d’outputs.  
+Contenu :  
+- Configuration des sorties vers des fichiers.  
+- Exportation des données au format CSV.  
+- Exécution de commandes avec exec.
+
+36. Logstash : output elasticsearch  
+Objectif : Configurer Logstash pour envoyer des données vers Elasticsearch.  
+Contenu :  
+- Configuration de la connexion Elasticsearch.  
+- Envoi des données en temps réel.
+
+37. Logstash : elasticsearch et le template d’index  
+Objectif : Gérer les templates d’index Elasticsearch avec Logstash.  
+Contenu :  
+- Création et utilisation des templates.  
+- Cas d’utilisation pour la normalisation des données.
+
+38. Elasticsearch : Index Lifecycle Management (ILM)  
+Objectif : Utiliser ILM pour gérer la durée de vie des index.  
+Contenu :  
+- Introduction à ILM.  
+- Création de politiques ILM pour la gestion des données historiques.
+
+39. Logstash : elasticsearch et ILM  
+Objectif : Intégrer Logstash avec ILM dans Elasticsearch.  
+Contenu :  
+- Configuration de Logstash pour appliquer des règles ILM.  
+- Meilleures pratiques.
+
+40. Logstash : output mongodb  
+Objectif : Configurer Logstash pour envoyer des données vers MongoDB.  
+Contenu :  
+- Connexion à une base MongoDB.  
+- Cas pratiques d’utilisation.
+
+41. Logstash : output redmine - principe de trigger  
+Objectif : Configurer un output vers Redmine.  
+Contenu :  
+- Création de triggers dans Redmine.  
+- Envoi automatique de tickets.
+
+42. Logstash : output kafka  
+Objectif : Configurer Logstash pour envoyer des données à Kafka.  
+Contenu :  
+- Configuration de l’output Kafka.  
+- Utilisation de Kafka pour la gestion des messages.
+
+43. Kibana : présentation  
+Objectif : Introduction à Kibana.  
+Contenu :  
+- Présentation des principales fonctionnalités.
+
+44. Kibana : KQL  
+Objectif : Apprendre à utiliser Kibana Query Language (KQL).  
+Contenu :  
+- Syntaxe et exemples de requêtes.
+
+45. Kibana : visualisations  
+Objectif : Créer des visualisations dans Kibana.  
+Contenu :  
+- Types de visualisations supportés.  
+- Création et personnalisation.
+
+46. Kibana : dashboard  
+Objectif : Créer et gérer des tableaux de bord Kibana.  
+Contenu :  
+- Ajout de visualisations à un tableau de bord.  
+- Organisation et partage des tableaux de bord.
+
+47. Kibana : management d’index  
+Objectif : Gérer les index dans Kibana.  
+Contenu :  
+- Consultation et suppression des index.  
+- Création de nouveaux index.
+
+48. Kibana : import dans Elasticsearch  
+Objectif : Importer des données dans Elasticsearch via Kibana.  
+Contenu :  
+- Formats supportés.  
+- Cas pratiques d’importation.
+
+49. Kibana : tls et path  
+Objectif : Configurer TLS et les chemins d’accès dans Kibana.  
+Contenu :  
+- Sécurisation des communications avec TLS.  
+- Configuration des chemins d’accès.
+
+50. OpenDistro  
+Objectif : Découvrir OpenDistro for Elasticsearch.  
+Contenu :  
+- Introduction à OpenDistro.  
+- Fonctionnalités supplémentaires par rapport à ELK.
+
