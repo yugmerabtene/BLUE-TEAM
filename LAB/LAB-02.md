@@ -1,4 +1,4 @@
-### **Lab 02 : Attaque et exploitation**  
+### **Lab 02 : Reconnnaissance, attaque et exploitation**  
 L'objectif est de simuler une attaque en plusieurs étapes pour exploiter les vulnérabilités détectées :  
 
 1. **Reconnaissance du réseau :**  
