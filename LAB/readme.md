@@ -1,4 +1,4 @@
-### **Rendus des Labs : Instructions et Format des Livrable**  
+### **Rendus des Labs : Instructions et Format des Livrables**  
 
 Pour chaque lab, les élèves doivent produire et soumettre les livrables suivants :  
 
