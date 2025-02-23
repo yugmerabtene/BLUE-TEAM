@@ -63,3 +63,4 @@
 - **Si vous êtes soumis à NIS** (par exemple, un OSE dans l’énergie ou un FSN comme un fournisseur cloud) : Utilisez **EBIOS Risk Manager** pour structurer votre démarche de conformité. Cela vous permettra de cartographier vos risques, de justifier vos mesures de sécurité auprès de l’ANSSI, et de répondre aux exigences de signalement d’incidents.
 - **Si vous n’êtes pas soumis à NIS** : EBIOS reste pertinent pour renforcer votre cybersécurité de manière proactive, en alignement avec les bonnes pratiques françaises.
 
+** Documentation : https://cyber.gouv.fr/sites/default/files/document/20240901_Guide-EBIOS-RM-V1.5.pdf
