@@ -196,16 +196,3 @@ Imaginons un incident où un malware extrait des credentials de la mémoire LSAS
 ### Accès et Intégration des ID ATT&CK
 Vous pouvez explorer les ID et leurs descriptions détaillées sur le site officiel de MITRE ATT&CK (https://attack.mitre.org/), où chaque entrée inclut des exemples, des groupes de menaces associés, des logiciels malveillants liés, et des recommandations de mitigation. Ces ID sont également intégrés dans de nombreuses plateformes et outils de cybersécurité (comme Splunk, CrowdStrike, ou Carbon Black) pour une utilisation pratique en temps réel.
 
-En conclusion, les ID ATT&CK sont un pilier fondamental du framework MITRE, offrant une méthode standardisée, claire et évolutive pour identifier, catégoriser et contrer les cyberattaques. Leur importance réside dans leur capacité à améliorer la communication, la détection, la défense et l’intelligence sur les menaces dans un paysage cybernétique en constante évolution. Si vous souhaitez approfondir un ID spécifique ou une TTP particulière, je suis à votre disposition pour vous guider !
-
----
-
-## Visuels Associés
-Pour illustrer les tactiques mentionnées, voici les images incluses dans votre texte original, qui restent pertinentes pour visualiser la structure hiérarchique des tactiques MITRE ATT&CK :
-
-![Tactiques MITRE ATT&CK](https://github.com/user-attachments/assets/1c8e8b88-247d-4082-bb84-f2c72244d72e)  
-*Représentation des 14 tactiques principales de MITRE ATT&CK, organisées en phases d’attaque.*
-
-![TTP et Structure](https://github.com/user-attachments/assets/93e50dbd-1767-478a-8ac4-f615146b285b)  
-*Illustration de la relation entre les Tactiques, Techniques et Procédures dans MITRE ATT&CK.*
-
