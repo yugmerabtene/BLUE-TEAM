@@ -19,7 +19,7 @@
 
 ----
 
-### Cours complet : Chapitre 1 - Vue d’ensemble du manuel de réponse aux incidents
+### Chapitre 1 - Vue d’ensemble du manuel de réponse aux incidents
 
 #### Introduction  
 Le premier chapitre d’un manuel de réponse aux incidents sert de fondation, offrant une compréhension globale de ce qu’est un incident de sécurité, pourquoi un manuel est nécessaire, et comment il structure la gestion des crises cybernétiques. Ce chapitre est essentiel pour aligner toutes les parties prenantes sur une approche commune et systématique.
