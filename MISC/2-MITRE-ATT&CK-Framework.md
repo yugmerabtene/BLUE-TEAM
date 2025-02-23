@@ -196,3 +196,5 @@ Imaginons un incident où un malware extrait des credentials de la mémoire LSAS
 ### Accès et Intégration des ID ATT&CK
 Vous pouvez explorer les ID et leurs descriptions détaillées sur le site officiel de MITRE ATT&CK (https://attack.mitre.org/), où chaque entrée inclut des exemples, des groupes de menaces associés, des logiciels malveillants liés, et des recommandations de mitigation. Ces ID sont également intégrés dans de nombreuses plateformes et outils de cybersécurité (comme Splunk, CrowdStrike, ou Carbon Black) pour une utilisation pratique en temps réel.
 
+**Documentation :** https://www.youtube.com/watch?v=LCec9K0aAkM  
+
