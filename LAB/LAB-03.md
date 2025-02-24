@@ -8,7 +8,7 @@ Les élèves doivent analyser l'attaque afin de comprendre les étapes du pirata
    - Effectuer un reverse engineering des malwares afin d’identifier leur comportement et remonter à l'origine de l'attaque.  
 
 3. **Rapport d'audit :**  
-   - Rédiger un rapport complet avec :  
+   - Rédiger un rapport complet avec : (Respecter les directives et normes suivantes : https://github.com/yugmerabtene/BLUE-TEAM/blob/main/MISC/RAPPORT-FORENSIC.md) 
      - Un résumé de l'attaque.  
      - Les failles exploitées.  
      - Les recommandations initiales pour renforcer la sécurité.  
