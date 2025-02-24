@@ -106,7 +106,7 @@ Pour Apache :
 sudo apt update
 sudo apt install libapache2-mod-security2 -y
 ```
-Pour Nginx, il faut compiler Nginx avec le module ModSecurity (plus complexe, dis-moi si tu utilises Nginx).
+
 
 #### Étape 2 : Activer ModSecurity
 - Copie le fichier de configuration par défaut :
