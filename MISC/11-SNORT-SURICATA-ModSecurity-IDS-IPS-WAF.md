@@ -71,6 +71,12 @@ Pour que Suricata bloque le trafic, intègre-le à `iptables` :
 sudo iptables -I FORWARD -j NFQUEUE --queue-num 0
 sudo iptables -I INPUT -j NFQUEUE --queue-num 0
 ```
+**Exempter le trafic SSH de NFQUEUE**
+Si tu veux garder Suricata actif mais permettre SSH, ajoute une règle pour accepter le trafic SSH avant qu’il ne soit envoyé à NFQUEUE :  
+```bash
+sudo iptables -I INPUT -p tcp --dport 22 -j ACCEPT
+```
+
 Puis lance Suricata en mode IPS :
 ```bash
 sudo suricata -c /etc/suricata/suricata.yaml -q 0
