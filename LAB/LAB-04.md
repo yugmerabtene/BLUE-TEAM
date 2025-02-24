@@ -1,110 +1,181 @@
-### **Lab 04 : Stratégie de défense (Blue Team)**  
-L'objectif de ce lab est de mettre en place une stratégie de défense robuste pour protéger l'infrastructure contre les attaques futures. Voici les étapes à suivre, en utilisant **Grafana** et **Prometheus** comme outils principaux de surveillance, ainsi que des mesures de sécurité supplémentaires pour le serveur web Linux, y compris une section sur la **cryptographie** pour protéger les données sensibles.
+### **Lab 04 : Stratégie de défense (Blue Team)**
+
+L'objectif de ce lab est de mettre en place une stratégie de défense robuste pour protéger l'infrastructure contre les attaques futures. Voici les étapes à suivre, en utilisant **Grafana** et **Prometheus** comme outils principaux de surveillance, ainsi que des mesures de sécurité supplémentaires pour le serveur web Linux et le serveur Windows Server 2019, y compris une section sur la **cryptographie** pour protéger les données sensibles.
 
 ---
 
-### **1. Mise en place d'outils de détection et de surveillance**  
-Pour surveiller et détecter les activités suspectes, nous allons déployer une stack de monitoring basée sur **Prometheus** (pour la collecte de métriques) et **Grafana** (pour la visualisation et l'analyse des données).  
+### **1. Mise en place d'outils de détection et de surveillance**
 
-#### **a. Installation de Prometheus**  
-- **Rôle :** Prometheus est un système de surveillance et d'alerte open source qui collecte des métriques à partir de diverses sources (serveurs, applications, etc.).  
-- **Configuration :**  
-  - Installer Prometheus sur un serveur dédié pour éviter les conflits de ressources.  
-  - Configurer les **exporters** pour collecter les métriques des serveurs (exemple : Node Exporter pour les métriques système).  
-  - Définir des **alertes** dans Prometheus pour détecter les anomalies (exemple : utilisation CPU élevée, trafic réseau suspect).  
+Pour surveiller et détecter les activités suspectes, nous allons déployer une stack de monitoring basée sur **Prometheus** (pour la collecte de métriques) et **Grafana** (pour la visualisation et l'analyse des données). **Grafana et Prometheus seront installés sur un serveur dédié** pour surveiller à la fois le **serveur web Linux** et le **serveur FTP Windows Server 2019**.
 
-#### **b. Installation de Grafana**  
-- **Rôle :** Grafana est un outil de visualisation de données qui permet de créer des tableaux de bord pour surveiller les métriques collectées par Prometheus.  
-- **Configuration :**  
-  - Installer Grafana sur un serveur dédié pour des raisons de performance et de sécurité.  
-  - Configurer Grafana pour se connecter à Prometheus en tant que source de données.  
-  - Créer des tableaux de bord pour surveiller :  
-    - L'utilisation des ressources (CPU, mémoire, disque).  
-    - Le trafic réseau.  
-    - Les logs d'accès au serveur web.  
-  - Configurer des alertes dans Grafana pour notifier l'équipe en cas d'activité suspecte.  
+#### **a. Installation de Prometheus**
 
-#### **c. Sécurisation des serveurs Prometheus et Grafana**  
-- **Authentification forte :** Utiliser des mots de passe complexes et activer l'authentification à deux facteurs (2FA) pour Grafana.  
-- **Chiffrement :** Configurer HTTPS pour sécuriser les communications entre les utilisateurs et Grafana/Prometheus.  
-- **Restriction d'accès :** Limiter l'accès aux serveurs Prometheus et Grafana à certaines adresses IP ou réseaux autorisés.  
+- **Rôle :** Prometheus est un système de surveillance et d'alerte open source qui collecte des métriques à partir de diverses sources (serveurs, applications, etc.).
+- **Configuration :**
+  - Installer Prometheus sur un serveur dédié pour éviter les conflits de ressources.
+  - Configurer les **exporters** pour collecter les métriques des serveurs (exemple : Node Exporter pour les métriques système Linux, WMI Exporter pour Windows).
+  - Définir des **alertes** dans Prometheus pour détecter les anomalies (exemple : utilisation CPU élevée, trafic réseau suspect).
 
----
+#### **b. Installation de Grafana**
 
-### **2. Mise en place de mesures de sécurité sur le serveur web Linux**  
-Pour protéger le serveur web, nous allons déployer des outils de sécurité supplémentaires :  
+- **Rôle :** Grafana est un outil de visualisation de données qui permet de créer des tableaux de bord pour surveiller les métriques collectées par Prometheus.
+- **Configuration :**
+  - Installer Grafana sur un serveur dédié pour des raisons de performance et de sécurité.
+  - Configurer Grafana pour se connecter à Prometheus en tant que source de données.
+  - Créer des tableaux de bord pour surveiller :
+    - L'utilisation des ressources (CPU, mémoire, disque) des serveurs Linux et Windows.
+    - Le trafic réseau.
+    - Les logs d'accès au serveur web.
+  - Configurer des alertes dans Grafana pour notifier l'équipe en cas d'activité suspecte.
 
-#### **a. Installation d'un IPS/IDS : Suricata**  
-- **Rôle :** Suricata est un système de détection et de prévention d'intrusions (IDS/IPS) qui analyse le trafic réseau en temps réel pour détecter les activités malveillantes.  
-- **Configuration :**  
-  - Installer Suricata sur le serveur web.  
-  - Configurer des règles pour détecter les attaques courantes (exemple : scans de ports, tentatives d'exploitation de vulnérabilités).  
-  - Intégrer Suricata avec Prometheus pour collecter et visualiser les alertes dans Grafana.  
+#### **c. Sécurisation des serveurs Prometheus et Grafana**
 
-#### **b. Déploiement d'un WAF (Web Application Firewall)**  
-- **Rôle :** Un WAF protège les applications web contre les attaques courantes telles que les injections SQL, les XSS, etc.  
-- **Configuration :**  
-  - Utiliser un WAF open source comme **ModSecurity** avec **Nginx** ou **Apache**.  
-  - Configurer des règles pour bloquer les requêtes malveillantes.  
-  - Surveiller les logs du WAF dans Grafana pour détecter les tentatives d'attaque.  
-
-#### **c. Renforcement de la sécurité du serveur Linux**  
-- **Mises à jour régulières :** Appliquer les correctifs de sécurité pour le système d'exploitation et les logiciels installés.  
-- **Configuration des pare-feux :** Utiliser **UFW** ou **iptables** pour restreindre l'accès aux ports essentiels (exemple : SSH, HTTP, HTTPS).  
-- **Désactivation des services inutiles :** Désactiver les services non utilisés pour réduire la surface d'attaque.  
-- **Surveillance des logs :** Configurer **rsyslog** ou **journald** pour centraliser les logs et les intégrer à Prometheus/Grafana.  
+- **Authentification forte :** Utiliser des mots de passe complexes et activer l'authentification à deux facteurs (2FA) pour Grafana.
+- **Chiffrement :** Configurer HTTPS pour sécuriser les communications entre les utilisateurs et Grafana/Prometheus.
+- **Restriction d'accès :** Limiter l'accès aux serveurs Prometheus et Grafana à certaines adresses IP ou réseaux autorisés.
 
 ---
 
-### **3. Cryptographie pour la protection des données sensibles**  
-La cryptographie est essentielle pour protéger les données sensibles, que ce soit en transit ou au repos. Voici les mesures à mettre en place :  
+### **2. Mise en place d'un Honeypot pour la détection des menaces**
 
-#### **a. Chiffrement des données en transit**  
-- **TLS/SSL :**  
-  - Configurer TLS/SSL pour toutes les communications entre les clients et le serveur web (HTTPS).  
-  - Utiliser des certificats SSL valides et à jour, de préférence avec des algorithmes forts comme ECDSA ou RSA 2048 bits.  
-  - Renouveler les certificats avant leur expiration pour éviter les interruptions de service.  
-- **VPN :**  
-  - Utiliser un VPN pour sécuriser les communications entre les serveurs internes et les utilisateurs distants.  
-  - Configurer OpenVPN ou WireGuard avec des clés de chiffrement fortes.  
+Un **honeypot** est un système de piège permettant de détecter les tentatives d'intrusion en attirant les attaquants vers un faux serveur vulnérable. Nous allons utiliser **Cowrie**, un honeypot spécialisé dans l'émulation de connexions SSH et Telnet.
 
-#### **b. Chiffrement des données au repos**  
-- **Chiffrement de disque :**  
-  - Utiliser **LUKS** (Linux Unified Key Setup) pour chiffrer les partitions de disque contenant des données sensibles.  
-  - Configurer une gestion sécurisée des clés de chiffrement (exemple : stocker les clés dans un HSM - Hardware Security Module).  
-- **Chiffrement des bases de données :**  
-  - Activer le chiffrement natif des bases de données (exemple : Transparent Data Encryption pour PostgreSQL ou MySQL).  
-  - Chiffrer les sauvegardes de bases de données avant de les stocker.  
-- **Chiffrement des fichiers sensibles :**  
-  - Utiliser des outils comme **GPG** (GNU Privacy Guard) pour chiffrer les fichiers sensibles avant de les envoyer ou de les stocker.  
+#### **a. Installation de Cowrie**
 
-#### **c. Gestion des clés de chiffrement**  
-- **Stockage sécurisé :**  
-  - Utiliser un gestionnaire de clés (exemple : HashiCorp Vault) pour stocker et gérer les clés de chiffrement de manière sécurisée.  
-  - Limiter l'accès aux clés de chiffrement aux seuls utilisateurs et services autorisés.  
-- **Rotation des clés :**  
-  - Mettre en place une politique de rotation régulière des clés de chiffrement pour limiter les risques en cas de compromission.  
-  - Automatiser la rotation des clés pour éviter les erreurs humaines.  
+1. **Prérequis :**
+   - Un serveur Linux avec Python 3.7 ou supérieur.
+   - Un utilisateur non privilégié pour exécuter Cowrie.
 
----
+2. **Installation :**
+   ```bash
+   sudo apt update
+   sudo apt install git python3-venv python3-pip
+   git clone https://github.com/cowrie/cowrie.git
+   cd cowrie
+   python3 -m venv cowrie-env
+   source cowrie-env/bin/activate
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
 
-### **4. Politique de sécurité**  
-Rédiger une politique de sécurité adaptée aux besoins de l'entreprise, en conformité avec les normes européennes (RGPD, NIS, ISO 27001). Voici les points clés à inclure :  
-- **Gestion des accès :** Mettre en place une politique de moindre privilège et utiliser des outils de gestion des identités (IAM).  
-- **Sauvegarde des données :** Configurer des sauvegardes régulières et chiffrées des données critiques.  
-- **Formation des employés :** Sensibiliser les employés aux bonnes pratiques de sécurité (exemple : détection des phishing).  
-- **Plan de réponse aux incidents :** Définir les étapes à suivre en cas de détection d'une attaque LAB-05.  
+3. **Configuration :**
+   - Modifier le fichier `cowrie.cfg` pour configurer les ports d'écoute SSH et Telnet.
+   - Démarrer Cowrie :
+     ```bash
+     ./bin/cowrie start
+     ```
+
+4. **Surveillance :**
+   - Les logs de Cowrie sont stockés dans le répertoire `var/log/cowrie/`.
+   - Intégrer les logs dans Grafana pour une surveillance centralisée.
 
 ---
 
-### **5. Simulation de défense**  
-Pour tester l'efficacité de la stratégie de défense, réaliser des simulations d'attaques :  
-- **Scénarios d'attaque :**  
-  - Scanner de ports avec **Nmap**.  
-  - Tentative d'injection SQL sur l'application web.  
-  - Attaque par force brute sur le serveur SSH.  
-- **Vérification des outils :**  
-  - Vérifier que Suricata détecte les scans de ports et les attaques réseau.  
-  - Vérifier que le WAF bloque les injections SQL et les XSS.  
-  - Vérifier que Prometheus et Grafana alertent en cas d'anomalies (exemple : pic de trafic, utilisation CPU élevée).  
-- **Amélioration continue :** Ajuster les règles et configurations en fonction des résultats des tests. 
+### **3. Sécurisation avancée du serveur web Linux**
+
+Pour protéger le serveur web, nous allons ajouter plusieurs couches de sécurité :
+
+#### **a. Installation de Fail2Ban**
+
+Fail2Ban surveille les tentatives de connexion répétées et bloque automatiquement les adresses IP suspectes.
+
+1. **Installation de Fail2Ban :**
+   ```bash
+   sudo apt install fail2ban -y
+   ```
+2. **Configuration :**
+   - Modifier le fichier `/etc/fail2ban/jail.local` et activer la protection pour SSH et Apache/Nginx.
+   - Redémarrer le service :
+     ```bash
+     sudo systemctl restart fail2ban
+     ```
+
+#### **b. Installation d'un IPS/IDS : Suricata**
+
+Suricata est un système de détection et de prévention des intrusions.
+
+1. **Installation de Suricata :**
+   ```bash
+   sudo apt install suricata -y
+   ```
+2. **Configuration des règles :**
+   - Modifier le fichier `/etc/suricata/suricata.yaml` pour activer les règles de détection des attaques.
+   - Redémarrer Suricata :
+     ```bash
+     sudo systemctl restart suricata
+     ```
+
+#### **c. Installation d'un WAF : ModSecurity**
+
+ModSecurity protège les applications web contre les attaques courantes.
+
+1. **Installation de ModSecurity avec Nginx :**
+   ```bash
+   sudo apt install libnginx-mod-security -y
+   ```
+2. **Configuration :**
+   - Activer ModSecurity dans la configuration de Nginx.
+   - Charger les règles OWASP ModSecurity Core Rule Set (CRS).
+   - Redémarrer Nginx :
+     ```bash
+     sudo systemctl restart nginx
+     ```
+
+---
+
+### **4. Politique de sécurité des données sensibles**
+
+#### **a. Cryptographie pour protéger les données sensibles**
+
+1. **Chiffrement des données au repos :**
+   - Utiliser **LUKS** pour chiffrer les disques sur le serveur Linux.
+   - Configurer **BitLocker** pour chiffrer les disques sur le serveur Windows Server 2019.
+
+2. **Chiffrement des données en transit :**
+   - Configurer **TLS/SSL** pour sécuriser les communications entre les serveurs et les clients.
+   - Utiliser des certificats SSL valides et les renouveler régulièrement.
+
+3. **Gestion des clés de chiffrement :**
+   - Utiliser un **HSM (Hardware Security Module)** ou un service de gestion des clés comme **AWS KMS** pour stocker et gérer les clés de chiffrement de manière sécurisée.
+
+---
+
+### **5. Simulation d'attaques et validation du système**
+
+Pour valider l'efficacité des mesures de sécurité mises en place, nous allons simuler des attaques et vérifier que les outils de détection et de protection fonctionnent correctement.
+
+#### **a. Simulation d'une attaque brute force SSH**
+
+1. **Utiliser un outil comme Hydra pour simuler une attaque brute force :**
+   ```bash
+   hydra -l utilisateur -P wordlist.txt ssh://<adresse_ip_serveur>
+   ```
+2. **Vérifier que Fail2Ban détecte et bloque l'adresse IP de l'attaquant.**
+
+#### **b. Simulation d'une attaque web (SQL Injection)**
+
+1. **Utiliser un outil comme SQLmap pour tester la vulnérabilité du serveur web :**
+   ```bash
+   sqlmap -u http://<adresse_ip_serveur>/page_vulnérable --dbs
+   ```
+2. **Vérifier que ModSecurity détecte et bloque l'attaque.**
+
+#### **c. Simulation d'une attaque réseau (DDoS)**
+
+1. **Utiliser un outil comme hping3 pour simuler une attaque DDoS :**
+   ```bash
+   hping3 -S --flood -p 80 <adresse_ip_serveur>
+   ```
+2. **Vérifier que Suricata détecte l'attaque et que les alertes sont visibles dans Grafana.**
+
+---
+
+### **6. Conclusion**
+
+Avec cette architecture, nous avons mis en place une stratégie de **Blue Team** complète intégrant :\
+✅ **Surveillance avancée avec Prometheus et Grafana.**\
+✅ **Détection proactive avec un honeypot Cowrie.**\
+✅ **Sécurisation renforcée des services web et réseau avec Fail2Ban, Suricata et ModSecurity.**\
+✅ **Protection des serveurs Linux et Windows.**\
+✅ **Cryptographie pour protéger les données sensibles.**\
+✅ **Plan de réponse aux incidents en cas de menace détectée LAB-05.**
