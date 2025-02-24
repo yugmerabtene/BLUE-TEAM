@@ -1,4 +1,4 @@
-## **Constat et Rapport Forensic en France : Intégration des Normes NIS et Européennes**
+## **Constat et Rapport Forensic : Intégration des Normes NIS et Européennes**
 
 En France, lorsqu’une analyse forensic révèle une adresse IP liée à une cyberattaque contre une entreprise, le constat et le rapport doivent non seulement respecter les exigences judiciaires nationales, mais aussi se conformer aux obligations européennes, notamment la Directive NIS (transposée en droit français par la Loi n° 2018-133 du 26 février 2018), le RGPD (Règlement Général sur la Protection des Données) et d'autres normes internationales telles que l'ISO/IEC 27001 (Gestion de la Sécurité de l'Information) et ISO/IEC 27037 (Gestion des preuves numériques). Voici une structure détaillée et optimisée :
 
