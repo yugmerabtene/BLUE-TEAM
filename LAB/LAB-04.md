@@ -84,7 +84,7 @@ Fail2Ban surveille les tentatives de connexion répétées et bloque automatique
    sudo apt install fail2ban -y
    ```
 2. **Configuration :**
-   - Modifier le fichier `/etc/fail2ban/jail.local` et activer la protection pour SSH et Apache/Nginx.
+   - Modifier le fichier `/etc/fail2ban/jail.conf` et activer la protection pour SSH et Apache/Nginx.
    - Redémarrer le service :
      ```bash
      sudo systemctl restart fail2ban
