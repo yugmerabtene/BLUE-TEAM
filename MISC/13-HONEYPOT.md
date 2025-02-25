@@ -1,5 +1,52 @@
+## Quelle architecture choisir pour son HoneyPot ##
+## **1. Solution simple et efficace (Isolation via VLAN + Firewall + Honeypot à faible interaction)**  
+🔹 **Idéal pour capturer des scans et attaques basiques sans grand risque.**  
+### **Architecture :**  
+- Honeypot placé dans un **VLAN isolé** sans accès direct au réseau interne.  
+- **Firewall strict** entre le VLAN du honeypot et le reste de l’infrastructure (ex. Palo Alto, Fortinet).  
+- **Honeypot à faible interaction** (ex. Cowrie pour SSH, Dionaea pour SMB).  
+- **Logs envoyés vers un SIEM externe** (ELK, Splunk, Wazuh...) pour analyse et alerte.  
 
-# ** Comprendre et Installer un Honeypot en Cybersécurité**  
+✅ **Avantages** : Simple à mettre en place, faible risque d’évasion.  
+❌ **Inconvénients** : N’attire que les attaquants de surface, peu d’informations sur des attaques avancées.  
+
+---
+
+## **2. Solution intermédiaire (Honeynet sur DMZ avec IDS/IPS et sandboxing)**  
+🔹 **Idéal pour détecter des attaques avancées et comprendre les comportements malveillants.**  
+### **Architecture :**  
+- Création d’une **DMZ spécifique pour le honeypot**, isolée du réseau interne.  
+- **Pare-feu strict** : Aucune connexion entrante/sortante vers le réseau interne.  
+- **Honeynet (ex. Honeyd, MHN) avec plusieurs faux services vulnérables**.  
+- **IDS/IPS (Snort, Suricata)** pour surveiller le trafic et bloquer des tentatives d’évasion.  
+- **Redirection des logs vers un SIEM sécurisé + Sandbox** pour analyser les malwares capturés.  
+
+✅ **Avantages** : Offre une meilleure visibilité sur les techniques des attaquants.  
+❌ **Inconvénients** : Plus complexe à gérer, nécessite une bonne surveillance pour éviter tout pivot.  
+
+---
+
+## **3. Solution avancée (Honeypot haute interaction avec virtualisation et segmentation stricte)**  
+🔹 **Idéal pour capturer et analyser des attaques ciblées et APT (Advanced Persistent Threats).**  
+### **Architecture :**  
+- **Honeypot à haute interaction (Ex. Windows Server, Linux avec vulnérabilités réelles)**.  
+- Hébergé dans un **environnement virtualisé ou conteneurisé** (VMware, KVM, Docker).  
+- **Micro-segmentation réseau** via SDN (Software Defined Network) pour un contrôle granulaire du trafic.  
+- **Surveillance renforcée** avec EDR (Endpoint Detection & Response) et logs analysés en temps réel par un SIEM.  
+- **Flux sortants uniquement via un proxy sécurisé** pour éviter que l’attaquant n’exploite le honeypot comme relais.  
+
+✅ **Avantages** : Capture des attaques sophistiquées, leurres crédibles.  
+❌ **Inconvénients** : Risque d’évasion plus élevé, demande des ressources et une expertise avancée.  
+
+---
+
+### **Quelle est la meilleure solution ?**  
+Si vous débutez ou voulez un **minimum de risque**, optez pour la **solution 1** (VLAN + Firewall + Honeypot simple).  
+Si vous voulez un **compromis entre sécurité et réalisme**, la **solution 2** (Honeynet en DMZ) est idéale.  
+Si vous recherchez une **analyse approfondie des attaques avancées**, alors la **solution 3** (Honeypot haute interaction) est la meilleure.  
+
+
+## **Comprendre et Installer un Honeypot en Cybersécurité**  
 
 ## **1. Introduction aux Honeypots**  
 
