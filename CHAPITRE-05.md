@@ -93,7 +93,7 @@ Les cadres de sécurité fournissent des lignes directrices pour gérer la sécu
 #### **Travaux Dirigés (TD)**
 
 ##### **TD 1 : Mise en œuvre d'un SMSI basé sur ISO 27001**
-**Objectif** : Appliquer les principes de l'ISO 27001 pour mettre en place un système de gestion de la sécurité de l'information (SMSI).
+**Objectif** : Appliquer les principes de l'ISO 27001 pour mettre en place un système de gestion de la sécurité de l'information (SMSI) https://cdn.standards.iteh.ai/samples/82875/ca15850b2c6448ccb7b90b4498213646/ISO-IEC-27001-2022.pdf.  
 
 **Étapes** :
 1. **Plan (Plan)** :
