@@ -105,9 +105,6 @@ L'organigramme comprend huit étapes, représentées par des boîtes reliées pa
      - Des modèles pour les rapports d’incidents ou la communication avec les parties prenantes.
      - Des journaux ou des outils pour suivre les incidents et les réponses.
 
-8. **Clôture du cours (Course Closure)**
-   - **Objectif** : La dernière étape du cours, où les participants terminent leur apprentissage et finalisent leur PRI.
-   - **Contribution au PRI** : Cette étape garantit que les participants quittent le cours avec un PRI complet et réalisable. Elle peut inclure une révision finale du plan, des discussions sur sa mise en œuvre et des conseils sur la manière de maintenir et de mettre à jour le PRI au fil du temps.
 
 ---
 
@@ -133,6 +130,7 @@ Bien que l’organigramme couvre les étapes clés, un bon PRI devrait égalemen
 Merci de votre demande ! Puisque vous avez répondu "oui" à ma question sur l'approfondissement d'une étape ou d'un aspect spécifique de la création d’un plan de réponse aux incidents (PRI), je vais me concentrer sur une étape clé de l’organigramme qui est essentielle pour un bon PRI : **le "Processus de réponse aux incidents cybernétiques" (Cyber Incident Response Process)**. Cette étape est cruciale car elle détaille comment le plan est mis en œuvre dans une situation réelle. Je vais l’expliquer en profondeur, en français, avec des exemples concrets et des bonnes pratiques.
 
 ---
+![image](https://github.com/user-attachments/assets/312e79a1-42e3-48bd-b217-27dc538f6976)
 
 ### Approfondissement : Processus de réponse aux incidents cybernétiques (Cyber Incident Response Process)
 
