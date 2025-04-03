@@ -31,6 +31,7 @@ Les cadres de sécurité fournissent des lignes directrices pour gérer la sécu
   - Norme internationale pour la gestion de la sécurité de l'information.
   - Basée sur le cycle PDCA (Plan-Do-Check-Act).
   - Exige la mise en place d'un système de gestion de la sécurité de l'information (SMSI).
+  - https://cdn.standards.iteh.ai/samples/82875/ca15850b2c6448ccb7b90b4498213646/ISO-IEC-27001-2022.pdf
 
 - **NIST Cybersecurity Framework** :
   - Cadre développé par le National Institute of Standards and Technology (NIST).
